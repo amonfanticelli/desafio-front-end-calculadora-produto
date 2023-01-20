@@ -148,7 +148,9 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  background-color: #f5f7fa;
+  
 }
 ol,
 ul {

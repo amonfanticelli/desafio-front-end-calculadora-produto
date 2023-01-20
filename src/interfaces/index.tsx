@@ -5,7 +5,8 @@ export interface CalculatorProps {
 }
 
 export interface ICalculator {
-  price: number;
+  amount: number;
   installments: number;
   mdr: number;
+  days?: number[];
 }
