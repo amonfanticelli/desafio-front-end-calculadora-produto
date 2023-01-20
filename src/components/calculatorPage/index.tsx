@@ -29,22 +29,48 @@ const Calculator = () => {
         <label htmlFor="days">
           Informe os dias para saber seu recebimento *
         </label>
-        <input id="days" {...register("days")} type="number" />
+        <div>
+          <label htmlFor="days15">15</label>
+          <input
+            className="checkBox"
+            id="days15"
+            {...register("days")}
+            value={15}
+            type="checkbox"
+          />
+          <label htmlFor="days30"> 30</label>
+          <input
+            className="checkBox"
+            id="days30"
+            {...register("days")}
+            value={30}
+            type="checkbox"
+          />
+        </div>
+        <div>
+          <label htmlFor="days45">45</label>
+          <input
+            className="checkBox"
+            id="days45"
+            {...register("days")}
+            value={45}
+            type="checkbox"
+          />
+          <label htmlFor="days60">60</label>
+          <input
+            className="checkBox"
+            id="days60"
+            {...register("days")}
+            value={60}
+            type="checkbox"
+          />
+        </div>
       </Form>
       <Aside>
         <h2>VOCÊ RECEBERÁ: </h2>
         <div></div>
         <span>
-          Amanhã: <p>{totalAmount}</p>
-        </span>
-        <span>
-          Em 15 dias: <p>A</p>
-        </span>
-        <span>
-          Em 30 dias: <p>A</p>
-        </span>
-        <span>
-          Em 90 dias: <p>A</p>
+          Total: <p>{totalAmount}</p>
         </span>
       </Aside>
     </Container>

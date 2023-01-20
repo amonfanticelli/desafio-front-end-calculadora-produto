@@ -4,7 +4,7 @@ import api from "../services/api";
 
 export interface CalculatorProviderData {
   handleCalculator: (data: ICalculator) => void;
-  totalAmount: string;
+  totalAmount: number[];
 }
 
 export const CalculatorContext = createContext<CalculatorProviderData>(
@@ -12,13 +12,13 @@ export const CalculatorContext = createContext<CalculatorProviderData>(
 );
 
 export const CalculatorProvider = ({ children }: CalculatorProps) => {
-  const [totalAmount, setTotalAmount] = useState("");
+  const [totalAmount, setTotalAmount] = useState<number[]>([]);
 
   const handleCalculator = async (data: ICalculator) => {
     await api
       .post("", data)
       .then((response) => {
-        setTotalAmount(response.data);
+        setTotalAmount(Object.values(response.data));
         console.log(response.data);
       })
       .catch((err) => console.warn(err));

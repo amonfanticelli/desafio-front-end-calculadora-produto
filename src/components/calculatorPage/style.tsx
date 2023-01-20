@@ -23,14 +23,24 @@ export const Form = styled.form`
   h1 {
     color: blue;
   }
+  div {
+    display: flex;
 
+    width: 100%;
+    height: 2rem;
+    align-items: center;
+  }
   label {
   }
 
   input {
     border: 1.2182px solid #343b41;
     width: 100%;
-    height: 2rem;
+    height: 1rem;
+  }
+
+  .checkBox {
+    width: 2rem;
   }
 `;
 
